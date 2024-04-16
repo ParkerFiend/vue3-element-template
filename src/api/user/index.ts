@@ -8,6 +8,6 @@ import './mock';
 /**
  * 获取数据
  */
-export function getData(): ApiRes<{ str: string }> {
+export function getData(): ApiRes<{ string: string }> {
   return request.get(Api.getData);
 }
