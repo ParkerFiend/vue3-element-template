@@ -11,29 +11,13 @@ export default {
   rules: {
     'font-family-no-missing-generic-family-keyword': null,
     'no-empty-source': null,
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'function',
-          'if',
-          'else',
-          'each',
-          'include',
-          'mixin',
-          'extend',
-        ],
-      },
-    ],
+    'scss/dollar-variable-pattern': /[a-z][a-zA-Z]+/,
+    'scss/at-mixin-pattern': /[a-z][a-zA-Z]+/,
   },
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
   overrides: [
     {
       files: ['*.vue', '**/*.vue', '*.html', '**/*.html'],
-      extends: [
-        'stylelint-config-recommended',
-        'stylelint-config-recess-order',
-      ],
       rules: {
         'selector-pseudo-class-no-unknown': [
           true,
@@ -52,11 +36,9 @@ export default {
     {
       files: ['*.scss', '**/*.scss'],
       customSyntax: 'postcss-scss',
-      extends: [
-        'stylelint-config-standard',
-        'stylelint-config-recommended-vue',
-        'stylelint-config-recess-order',
-      ],
+      rules: {
+        'rule-empty-line-before': 'never',
+      },
     },
   ],
 };

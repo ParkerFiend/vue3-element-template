@@ -17,9 +17,10 @@ p,
 blockquote,
 th,
 td {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
+
 /* Normalizes font-size for headers */
 h1,
 h2,
@@ -29,11 +30,13 @@ h5,
 h6 {
   font-size: 100%;
 }
+
 /* Removes list-style from lists */
 ol,
 ul {
   list-style: none;
 }
+
 /* Normalizes font-size and font-weight to normal */
 address,
 caption,
@@ -47,27 +50,30 @@ var {
   font-size: normal;
   font-weight: normal;
 }
+
 /* Removes list-style from lists */
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
+
 /* Removes border from fieldset and img */
 fieldset,
 img {
   border: 0;
 }
+
 /* Left-aligns text in caption and th */
 caption,
 th {
   text-align: left;
 }
+
 /* Removes quotation marks from q */
 q::before,
 q::after {
   content: '';
 }
-
 * {
   box-sizing: border-box;
 }

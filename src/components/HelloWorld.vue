@@ -6,8 +6,11 @@ defineProps<{ msg: string }>();
   <h1 class="msg">{{ msg }}</h1>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .msg {
+  height: 100px;
   color: #888;
+
+  @include mixin.setBorder;
 }
 </style>

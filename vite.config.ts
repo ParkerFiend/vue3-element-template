@@ -12,6 +12,13 @@ import { presetUno } from 'unocss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/scss/variables";@use "@/scss/mixin";`,
+      },
+    },
+  },
   plugins: [
     vue(),
     AutoImport({

@@ -8,7 +8,10 @@
     "build:test": "vue-tsc && vite build --mode test",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint \"src/**/*.{vue,js}\" --fix"
+    "lint:eslint": "eslint \"src/**/*.{vue,js,ts}\" --fix",
+    "lint:stylelint": "npx stylelint \"**/*.scss\" --fix",
+    "prepare": "husky",
+    "commit": "npx cz"
   },
   "dependencies": {
     "axios": "^0.26.0",
@@ -22,11 +25,18 @@
     "@types/node": "^20.12.7",
     "@typescript-eslint/parser": "^7.6.0",
     "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "commitizen": "^4.3.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-vue": "^9.25.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.38",
+    "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
+    "pretty-quick": "^4.0.0",
     "sass": "^1.75.0",
     "stylelint": "^16.3.1",
     "stylelint-config-recess-order": "^5.0.1",
@@ -42,5 +52,14 @@
     "vite": "^5.2.0",
     "vue-eslint-parser": "^9.4.2",
     "vue-tsc": "^2.0.6"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "> 2% in CN"
+  ],
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix",
+    "*.{scss,sass}": "stylelint --fix"
   }
 }
