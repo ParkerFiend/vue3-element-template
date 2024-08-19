@@ -8,6 +8,7 @@
     "build:test": "vue-tsc && vite build --mode test",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "tsc": "vue-tsc",
     "lint:eslint": "eslint \"src/**/*.{vue,js,ts}\" --fix",
     "lint:stylelint": "npx stylelint \"**/*.scss\" --fix",
     "prepare": "husky",
